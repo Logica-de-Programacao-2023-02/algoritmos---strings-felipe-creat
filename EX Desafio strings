@@ -1,0 +1,26 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var x, padrão string
+	fmt.Print("Digite uma string:")
+	fmt.Scan(&x)
+	fmt.Print("Digite um padrão:")
+	fmt.Scan(&padrão)
+
+	var indexes []int
+
+	for i := len(x) - 1; i >= 0; i-- {
+		idx := strings.Index(x[i:], padrão)
+		fmt.Println(i, idx)
+		if idx != -1 {
+			indexes = append(indexes, i+idx)
+
+		}
+	}
+	fmt.Println(indexes)
+}
