@@ -1,0 +1,22 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+//Solicite ao usuário duas strings e
+//informe se a segunda é uma substring da primeira.
+
+func main() {
+	var x, y string
+	fmt.Print("Escreva duas strings:")
+	fmt.Scan(&x, &y)
+	if strings.Contains(x, y) {
+		fmt.Println("A sengunda é uma substring da primeira")
+
+	} else {
+		fmt.Println("A segunda não é uma substring da primeira")
+
+	}
+}
